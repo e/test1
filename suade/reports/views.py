@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 import json
+import dicttoxml
 
 from django.http import HttpResponse
 
@@ -18,6 +19,10 @@ def home(request):
 def pdf_report(request, pk):
     report = get_object_or_404(Report, pk=pk)
     data = json.loads(report.type)
+    if 'xml' in request.GET:
+        result = dicttoxml.dicttoxml(data)
+        http_response = HttpResponse(result, content_type='application/xml')
+        return http_response
     html_template = get_template('report.html')
     rendered_html = html_template.render(
         data).encode(encoding="UTF-8")
