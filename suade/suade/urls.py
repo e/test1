@@ -20,5 +20,5 @@ from reports.views import pdf_report
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', pdf_report),
-    url(r'^reports/(?P<id>[\d+])$', pdf_report),
+    url(r'^reports/(?P<pk>[\d+])$', pdf_report),
 ]

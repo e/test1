@@ -23,17 +23,16 @@ ul {
     <h1>The report</h1>
     <div id="header-list">
      <ul>
-      <li>Organization: </li>
-      <li>Reported: </li>
-      <li>Created</li>
+      <li>Organization: {{ organization }}</li>
+      <li>Reported: {{ reported_at }}</li>
+      <li>Created: {{ created_at }}</li>
      </ul>
     </div>
    </div>
    <div id="results">
     <ul>
-     <li>Organization: </li>
     {% for item in inventory %}
-     <li>Organization: </li>
+    <li>{{ item.name }}: {{ item.price }}</li>
     {% endfor %}
     </ul>
    </div>
