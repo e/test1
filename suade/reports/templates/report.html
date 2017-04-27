@@ -1,0 +1,42 @@
+<html>
+ <head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <style>
+ul {
+ list-style: none;
+}
+#header h1 {
+ text-align: center;
+}
+#header-list ul {
+ float: right;
+}
+#results {
+ text-align: center;
+ clear: both;
+}
+  </style>
+ </head>
+ <body>
+  <div id="container">
+   <div id="header">
+    <h1>The report</h1>
+    <div id="header-list">
+     <ul>
+      <li>Organization: </li>
+      <li>Reported: </li>
+      <li>Created</li>
+     </ul>
+    </div>
+   </div>
+   <div id="results">
+    <ul>
+     <li>Organization: </li>
+    {% for item in inventory %}
+     <li>Organization: </li>
+    {% endfor %}
+    </ul>
+   </div>
+  </div>
+ </body>
+</html>
