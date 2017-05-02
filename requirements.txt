@@ -1,0 +1,4 @@
+dicttoxml==1.7.4
+Django==1.11
+psycopg2==2.7.1
+WeasyPrint==0.36
