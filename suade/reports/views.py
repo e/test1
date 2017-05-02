@@ -13,7 +13,7 @@ from reports.models import Report
 
 
 def home(request):
-    return render(request, 'report.html', {})
+    return render(request, 'home.html', {})
 
 
 def pdf_report(request, pk):

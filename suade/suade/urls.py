@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from reports.views import pdf_report
+from reports.views import pdf_report, home
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', pdf_report),
+    url(r'^$', home, name="home"),
     url(r'^reports/(?P<pk>[\d+])$', pdf_report),
 ]
